@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ResultsTable from './ResultsTable';
-import ControlButtons from './ControlButtons';
 import marathonResults from './MarathonResults.json';
 import countryCodes from './CountryCodes.json';
 import HeadToHeadComparison from './HeadToHeadComparison';

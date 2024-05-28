@@ -1,20 +1,34 @@
 import React from 'react';
 import ResultRow from './ResultRow';
 
-const ResultsTable = ({ athletes, sortedField }) => {
+const ResultsTable = ({ athletes, sortConfig, sortAthletes, toggleFavorite, toggleSelectAthlete, selectedAthletes }) => {
+    const getClassNamesFor = (name) => {
+        if (!sortConfig) {
+            return;
+        }
+        return sortConfig.key === name ? sortConfig.direction : undefined;
+    };
+
     return (
         <table>
             <thead>
                 <tr>
-                    <th>Rank</th>
-                    <th>Full Name</th>
-                    <th>Finish Time</th>
-                    <th>Country Code</th>
+                    <th onClick={() => sortAthletes('rank')} className={getClassNamesFor('rank')}>Rank</th>
+                    <th onClick={() => sortAthletes('surname')} className={getClassNamesFor('firstname')}>Full Name</th>
+                    <th onClick={() => sortAthletes('finishtime')} className={getClassNamesFor('finishtime')}>Finish Time</th>
+                    <th onClick={() => sortAthletes('flag')} className={getClassNamesFor('flag')}>Country</th>
+                    <th onClick={() => sortAthletes('bibnumber')} className={getClassNamesFor('bibnumber')}>Bib Number</th>
                 </tr>
             </thead>
             <tbody>
                 {athletes.map(athlete => (
-                    <ResultRow key={athlete.athleteid} athlete={athlete} />
+                    <ResultRow
+                        key={athlete.rank}
+                        athlete={athlete}
+                        toggleFavorite={toggleFavorite}
+                        toggleSelectAthlete={toggleSelectAthlete}
+                        isSelected={selectedAthletes.includes(athlete.rank)}
+                    />
                 ))}
             </tbody>
         </table>

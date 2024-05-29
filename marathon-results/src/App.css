@@ -19,7 +19,7 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 10px; /* Adds space between buttons */
   margin-bottom: 20px;
 }
 
@@ -150,7 +150,7 @@ img {
   }
 
   .search-input, .export-button {
-    width: 40%;
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -166,6 +166,7 @@ img {
   .logo-top-center {
     position: static;
     margin-top: 20px;
+    width: 200px;
   }
 
   .title {

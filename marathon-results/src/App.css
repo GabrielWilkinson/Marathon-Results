@@ -28,11 +28,11 @@ body, html {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 250px;
+  width: 300px;
 }
 
 .title {
-  margin-top: 140px;
+  margin-top: 170px;
   color: #ffcc00;
 }
 
@@ -90,14 +90,6 @@ th {
   background-color: #333;
 }
 
-th.ascending::after {
-  content: ' ⬆';
-}
-
-th.descending::after {
-  content: ' ⬇';
-}
-
 h1 {
   color: #ffcc00;
 }
@@ -144,17 +136,39 @@ img {
   font-size: 20px;
 }
 
+.top-right-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  color: #ffcc00;
+}
+
 @media (max-width: 600px) {
   .controls {
     flex-direction: column;
   }
 
   .search-input, .export-button {
-    width: 100%;
+    width: 40%;
     box-sizing: border-box;
   }
 
   .export-button {
     margin-top: 10px;
+  }
+
+  .top-right-container {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .logo-top-center {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .title {
+    margin-top: 20px;
   }
 }

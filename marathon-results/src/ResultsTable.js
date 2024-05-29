@@ -18,6 +18,7 @@ const ResultsTable = ({ athletes, sortConfig, sortAthletes, toggleFavorite, togg
                     <th onClick={() => sortAthletes('finishtime')} className={getClassNamesFor('finishtime')}>Finish Time</th>
                     <th onClick={() => sortAthletes('flag')} className={getClassNamesFor('flag')}>Country</th>
                     <th onClick={() => sortAthletes('bibnumber')} className={getClassNamesFor('bibnumber')}>Bib Number</th>
+                    <th>Completed</th>
                 </tr>
             </thead>
             <tbody>

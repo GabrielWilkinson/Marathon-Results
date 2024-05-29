@@ -93,6 +93,7 @@ const App = () => {
     );
 
     const gender = marathonResults.results.gender;
+    const raceTime = marathonResults.results.racetime;
     let formattedGender = null;
     if (gender === 'male'){
       formattedGender = 'Mens';
@@ -103,18 +104,20 @@ const App = () => {
     return (
         <div className="container">
             <img src={logo} alt="Top Center Logo" className="logo-top-center" />
-            <h1 className="title">{marathonResults.results.racename} - {formattedGender} Results</h1>
-            <input
-                type="text"
-                placeholder="Search by name, country, or team"
-                value={searchQuery}
-                onChange={handleSearchChange}
-                className="search-input"
-            />
+            <h1 className="title">{marathonResults.results.racename} - {formattedGender} Results - {raceTime}</h1>
+            <div className="controls">
+                <input
+                    type="text"
+                    placeholder="Search by name, country, or team"
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    className="search-input"
+                />
+                <button className="export-button" onClick={exportToCSV}>Export to CSV</button>
+            </div>
             <div className="table-wrapper">
                 <div className="table-background"></div>
                 <div className="table-container">
-                    <button className="export-button" onClick={exportToCSV}>Export to CSV</button>
                     <ResultsTable
                         athletes={filteredAthletes}
                         sortConfig={sortConfig}

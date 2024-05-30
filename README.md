@@ -1,7 +1,7 @@
 ## Marathon Results Display
 https://marathonresults.netlify.app/
 
-I chose to build Marathon Results Display app in React due to its ability to create clear, dynamic, and interactive user interfaces. Its component-based architecture promotes a modular and maintainable codebase, ensuring clarity and consistency across the application.  The framework's robust state management allows for easy implementation of features like sorting, prioritization, and performance comparisons of athletes. React excels at handling real-time updates efficiently with its virtual DOM, making it perfect for potential future enhancements of displaying live race data and completion statuses. 
+I chose to build Marathon Results Display app in React due to its ability to create clear, dynamic, and interactive user interfaces. Its component-based architecture promotes a modular and maintainable codebase, ensuring clarity and consistency across the application. The framework's robust state management allows for easy implementation of features like sorting, prioritization, and performance comparisons of athletes. React excels at handling real-time updates efficiently, making it perfect for potential future enhancements of displaying live race data and completion statuses.
 
 ## User Stories
 
